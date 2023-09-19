@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <style>
+        .index{
+          padding:90px 450px
+          
+        }
+        body{
+          background-image:url(https://wallpapercave.com/wp/wp2561064.jpg) ;
+          background-repeat: no-repeat;
+          background-size:cover;
+          position: relative;
+          
+          
+        }
+      </style>
+</head>
+<body>
+    <div class="index">
+        <div style="border: 1px solid;text-align: center;border-color: rgb(95, 190, 231);background-color: rgb(167, 213, 230);;border-radius: 10px;">
+            <h3>Edit Profile</h3>
+            <form method="post" >
+            {% csrf_token %}
+                <input type="text" name="name" style="margin: 10px" value="{{user.nm}}" size="50"><br>
+                <input type="email" name="email"style="margin: 10px" value="{{user.eml}}"size="50"><br>
+                <input type="text" name="fnm"style="margin: 10px" value="{{user.fnm}}"size="50"><br>
+                <input type="text" name="mnm"style="margin: 10px" value="{{user.mnm}}"size="50"><br>
+                <input type="text" name="no" style="margin: 10px" value="{{user.num}}"size="50"><br>
+                <input type="text" name="cls" style="margin: 10px" value="{{user.cl}}"size="50"><br>
+                <input type="text" name="adr" style="margin: 10px"value="{{user.adr}}" size="50"><br>
+                <input type="submit" name="sub" value="Update" style="margin: 30px"  class="btn btn-secondary">
+            
+            </form>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+</body>
+</html>
