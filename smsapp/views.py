@@ -237,8 +237,8 @@ def pnotes(request,id):
     return render(request,'pnotes.html',{'c':obj})
 
 def note(request,id):
-    obj=registermodel.objects.get(id=id)
-    cls=obj.clss
+    obj=regmodel.objects.get(id=id)
+    cls=obj.cl
     a=pnotesmodel.objects.filter(cla=cls)
     return render(request,'note.html',{'a':a})
 
